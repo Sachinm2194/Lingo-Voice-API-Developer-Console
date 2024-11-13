@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+// @import './Themes/theme.scss'
+/* styles.scss */
+
+.light-theme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  .dark-theme {
+    --background-color: #333333;
+    --text-color: #ffffff;
+  }
+  
+  .theme1 {
+    --background-color: #f0e68c;
+    --text-color: #333333;
+  }
+  
+  .theme2 {
+    --background-color: #8a2be2;
+    --text-color: #ffffff;
+  }
+  
+  /* Use these variables in your app */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  

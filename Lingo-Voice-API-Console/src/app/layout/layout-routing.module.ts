@@ -1,9 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+import { HomeComponent } from './Dashboard/home/home.component';
 
 const routes: Routes = [
-  {path:'',component:DashboardComponent}
+  {path:'',component:HomeComponent}
 ];
 
 @NgModule({

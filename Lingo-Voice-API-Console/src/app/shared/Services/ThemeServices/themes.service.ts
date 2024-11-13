@@ -4,6 +4,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ThemesService {
+  private currentTheme: string;
 
-  constructor() { }
+  constructor() {
+    this.currentTheme = localStorage.getItem('theme') || 'light-theme';
+    this.applyTheme(this.currentTheme);
+  }
+
+  setTheme(theme: string): void {
+    this.currentTheme = theme;
+    localStorage.setItem('theme', theme);
+    this.applyTheme(theme);
+  }
+
+  applyTheme(theme: string): void {
+    document.body.classList.remove('light-theme', 'dark-theme', 'theme1', 'theme2');
+    document.body.classList.add(theme);
+  }
+
+  getTheme(): string {
+    return this.currentTheme;
+  }
 }
