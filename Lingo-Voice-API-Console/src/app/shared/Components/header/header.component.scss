@@ -1,0 +1,56 @@
+/* Basic header styling */
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    top: 0;
+    position: fixed;
+    height: 64px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between; /* Ensures space between sections */
+    align-items: center;
+    padding-right: 1rem;
+  }
+  
+  /* Menu Section Styling (Unchanged) */
+  .menu {
+    height: 64px;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Logo Styling */
+  .app-brand-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  /* Header Sections */
+  .header-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Space between the sections */
+    align-items: center;
+  }
+  
+  
+ 
+li{
+    cursor: pointer;
+    padding-right: 1rem;
+}
+  

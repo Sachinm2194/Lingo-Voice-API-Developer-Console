@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 // @import './Themes/theme.scss'
 /* styles.scss */
-
+*{
+  margin: 0;
+  padding: 0;
+}
 .light-theme {
     --background-color: #ffffff;
     --text-color: #000000;
+    --buttons-bg-color:
   }
   
   .dark-theme {
@@ -28,3 +32,6 @@
     color: var(--text-color);
   }
   
+
+  // <button class="buttons" (click)="setTheme('light-theme')">Light</button>
+  //   <button class="buttons" (click)="setTheme('dark-theme')">Dark</button>
