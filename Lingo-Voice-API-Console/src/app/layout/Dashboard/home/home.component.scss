@@ -1,0 +1,120 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles for the component */
+:host {
+  display: block;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Buttons */
+.buttons {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  display: block;
+  margin: 5px 0;
+}
+
+/* Home container to wrap the entire layout */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  position: relative;
+}
+
+/* Header fixed at the top */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--background-color);
+}
+
+/* Mini sidebar style */
+.mini-sidebar {
+  width: 72px;
+  position: fixed;
+  top: 64px;
+  height: calc(100vh - 64px);
+  text-align: center;
+  z-index: 10;
+  transition: transform 0.3s ease; /* Transition for mini sidebar */
+  transform: translateX(0); /* Keep mini sidebar visible */
+}
+
+/* Full sidebar style, initially off-screen */
+.full-sidebar {
+  position: fixed;
+  top: 64px;
+  height: calc(100vh - 64px);
+  width: 250px;
+  z-index: 10;
+  background-color: var(--sidebar-background);
+  transition: transform 0.3s ease-in-out; /* Transition for full sidebar */
+  transform: translateX(-100%); /* Initially hidden off-screen */
+}
+
+/* Full sidebar when it's visible */
+.full-sidebar.show {
+  transform: translateX(0); /* Slide the sidebar into view */
+}
+
+/* Sidebar icons layout */
+.sidebar-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+/* Sidebar icons clickable */
+.icons {
+  cursor: pointer;
+}
+
+/* Content area */
+.content {
+  margin-top: 64px;
+  margin-left: 72px;
+  width: calc(100vw - 72px);
+  overflow-y: auto;
+  z-index: 5;
+  transition: margin-left 0.3s ease; /* Transition for content margin */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 576px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .mini-sidebar {
+    width: 100vw;
+    height: 72px;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    transform: translateX(0); /* Keep mini sidebar visible */
+  }
+
+  .sidebar-icons {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 72px;
+    list-style: none;
+  }
+
+  .content {
+    width: 100vw;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,32 @@
+/* Light Theme */
+:root.light-theme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff;
+    /* Add other color variables as needed */
+  }
+  
+  /* Dark Theme */
+  :root.dark-theme {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #ff5722;
+    /* Add other color variables as needed */
+  }
+  
+  /* Additional Theme 1 */
+  :root.theme1 {
+    --background-color: #f0f8ff;
+    --text-color: #2c3e50;
+    --primary-color: #8e44ad;
+    /* Add other color variables as needed */
+  }
+  
+  /* Additional Theme 2 */
+  :root.theme2 {
+    --background-color: #ffebcd;
+    --text-color: #654321;
+    --primary-color: #4682b4;
+    /* Add other color variables as needed */
+  }
+  

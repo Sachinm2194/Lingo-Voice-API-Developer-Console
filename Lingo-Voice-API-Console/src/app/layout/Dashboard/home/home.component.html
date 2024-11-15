@@ -1,0 +1,34 @@
+<div class="home-container">
+  <!-- Header Section -->
+  <div class="header">
+    <div class="heading">
+      <app-header (toggleSidebar)="onToggleSidebar()"></app-header> 
+    </div>
+  </div>
+
+  <!-- Sidebar Section (Conditionally Rendered) -->
+  <div class="sidebar-container">
+    <!-- Full Sidebar (Conditionally Rendered with Smooth Transition) -->
+    <div *ngIf="isSidebarOpen" class="sidebar full-sidebar show">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <!-- Mini Sidebar (Conditionally Rendered for Mobile View) -->
+    <div *ngIf="!isSidebarOpen" class="mini-sidebar border">
+      <div class="sidebar-icons">
+        <li class="mt-3 icons" [innerHTML]="currentHomeIcon"></li>
+        <li class="mt-3 icons" [innerHTML]="currentKeyIcon"></li>
+        <li class="mt-3 icons" [innerHTML]="currentUsageIcon"></li>
+        <li class="mt-3 icons" [innerHTML]="currentSettingsIcon"></li>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content">
+    <app-dashboard></app-dashboard>
+    <button class="buttons border" (click)="setTheme('light-theme')">Light</button>
+    <button class="buttons border" (click)="setTheme('dark-theme')">Dark</button>
+    <app-dashboard></app-dashboard>
+  </div>
+</div>
